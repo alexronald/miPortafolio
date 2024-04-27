@@ -98,3 +98,6 @@ const emailVálido = email => {
 }
 
 btnEnviar.addEventListener('click', validacion);
+
+
+
