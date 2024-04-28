@@ -297,18 +297,96 @@ section.title{
 }
 
 /*Sección About*/
+.about__container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
 
+}
+.about__card{
+    flex-basis: calc(100vw / 4);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5%;
+    padding: 1rem 1rem;
+    background-color: var(--global-color-3);
+    animation: rebote 0.5s infinite;
+    animation-play-state: paused;
+}
+
+.about__card:hover{
+    animation-play-state: running;
+    background-color: #33030d;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+@keyframes rebote {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.about__card:active{
+    animation-play-state: running;;
+}
+.about__card__title{
+    border-left: 0.3rem var(--global-color-5) solid;
+}
+.about__card__title>h3{
+    font-family: var(--orbitron);
+    font-weight: 200;
+    font-size: 25px;
+    color: var(--global-color-5);
+    padding: 0px 10px
+}
+.about__head{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+}
 .about__title{
 font-family: var(--orbitron);
 font-weight: 700;
 font-size: 40px;
 
 }
+.about__card__icon{
+    color: var(--global-color-0);
+
+
+}
+.about__title__h2{
+    font-family: var(--orbitron);
+    font-weight: 700;
+    color: var(--global-color-7);
+}
 .about__paragraph{
     color: #7c7c7c;
     font-weight: 100;
     font-family: var(--source-sans-pro);
     text-align: justify;
+}
+.about__contentd__end{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
+.about__contentd__star{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
 }
 /*Sección Hobbies*/
 .skills__title{
@@ -609,6 +687,19 @@ Utiliza las referencias de los breakpoints @media abajo */
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .about__container{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap:wrap;
+    
+    }
+    .about__card {
+        flex-basis: calc(100vw / 3);
+        flex-grow: 2;
     }
     .skills__box {
         width: calc(25%);

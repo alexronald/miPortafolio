@@ -1,33 +1,4 @@
-/*const form = document.getElementById('contact-form');
-
-form.addEventListener('submit', function(event) {
-  // Prevenir el envío del formulario por defecto
-  event.preventDefault();
-
-  // Validar los campos del formulario
-  const name = document.getElementById('nombre').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('asunto').value.trim();
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailValido(email.value)) {
-      alert('Por favor ingrese un correo electrónico válido.');
-      return;
-    }
-
-  if (!name || !email || !message) {
-    alert('Por favor complete todos los campos requeridos.');
-    return;
-  }
-
-  // Envíe el formulario si todos los campos están completos
-  this.submit();
-});
-
-const emailValido = email => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }*/
-  const btnEnviar = document.getElementById('btn-enviar');
+const btnEnviar = document.getElementById('btn-enviar');
 
 const validacion = (e) => {
   e.preventDefault();
