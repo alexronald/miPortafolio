@@ -457,6 +457,8 @@ font-size: 40px;
     align-items: center ;
     margin-top: 1rem;
     display: flex;
+    flex-direction: row;
+
 }
 .skills__contend, .hobbies__contend{
     width: 70%;
@@ -497,11 +499,6 @@ margin: .5rem;
     justify-content: center;
 }
 
-.hobbies{
-    align-items: center ;
-    margin-top: 1rem;
-    display: flex;
-}
 .hobbies__title{
     font-family: var(--orbitron);
     font-weight: 700;
@@ -923,17 +920,17 @@ Utiliza las referencias de los breakpoints @media abajo */
     .carousel-inner .carousel-item > div {
         display: block;
     }
+    .skills, .hobbies {
+        flex-direction: column;
+    }
+    .hobbies {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 
 }
 .carousel-inner .carousel-item-next{
     display: none;
-}
-.skills, .hobbies {
-    flex-direction: column;
-}
-.hobbies {
-    display: flex;
-    flex-direction: column-reverse;
 }
 .skills__contend, .hobbies__contend {
     width: 100%;
@@ -1023,4 +1020,3 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 /*Footer*/
 
-}
