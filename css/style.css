@@ -441,7 +441,7 @@ font-size: 40px;
     .carousel-inner .carousel-item-prev {
         transform: translateX(-25%);
     }
-}
+}*/
 
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start { 
@@ -777,6 +777,10 @@ Utiliza las referencias de los breakpoints @media abajo */
         flex-basis: calc(100vw / 3);
         flex-grow: 2;
     }
+
+    .carousel-inner .carousel-item > div {
+        display: block;
+    }
     .skills__box {
         width: calc(25%);
         height: 130px;
@@ -915,23 +919,36 @@ Utiliza las referencias de los breakpoints @media abajo */
         flex-direction: column;
         align-items: center;
     }
+
+    .carousel-inner .carousel-item > div {
+        display: block;
+    }
+
+}
+.carousel-inner .carousel-item-next{
+    display: none;
+}
+.skills, .hobbies {
+    flex-direction: column;
+}
+.hobbies {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.skills__contend, .hobbies__contend {
+    width: 100%;
+}
     .skills__box {
-        width: calc(32%);
+        display: flex;
+        width: 20%;
         height: 130px;
 
     }
-
-    .skills__line {
-        flex-wrap: wrap}
 
     .hobbies__box {
-        width: calc(32%);
+        width: 20%;
         height: 130px;
     
-    }
-    
-    .hobbies__line{
-        flex-wrap: wrap
     }
     
     .academic__courses{
