@@ -648,7 +648,7 @@ display: flex;
     margin-bottom: .5rem;
 }
 .formcontato__textarea{
-    border: 1px solid #fd6621;
+    border: 1px solid var(--global-color-6);
     font-family: var(--source-sans-pro);
     border-radius: 10px;
     font-size: 16px;
@@ -659,7 +659,7 @@ display: flex;
 .formcontato__botao{
     width: 30%;
     color: #ffffff;
-    background-color: #fd6621;
+    background-color: var(--global-color-0);
     font-weight: 100;
     font-family: var(--source-sans-pro);
     padding: 1rem 2rem;
@@ -669,11 +669,11 @@ display: flex;
 }
 
 .formcontato__input:focus-visible{
-    border: 1px solid #fd6621;
+    border: 1px solid var(--global-color-6);
     border-radius: 10px;
 }
 .formcontato__input:active{
-    border: 1px solid #fd6621;
+    border: 1px solid var(--global-color-6);;
     border-radius: 10px;
 }
 /*footeer*/
@@ -878,6 +878,9 @@ Utiliza las referencias de los breakpoints @media abajo */
     .about__title{
     text-align: left;
     }
+    .about__container{
+        flex-direction: column;
+    }
     .presentacion{
         padding-top: 70PX;
     }
@@ -928,7 +931,14 @@ Utiliza las referencias de los breakpoints @media abajo */
         flex-direction: column-reverse;
     }
 
-}
+    .academic__courses{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+
+    
 .carousel-inner .carousel-item-next{
     display: none;
 }
@@ -936,24 +946,18 @@ Utiliza las referencias de los breakpoints @media abajo */
     width: 100%;
 }
     .skills__box {
-        display: flex;
-        width: 20%;
+        width: auto;
         height: 130px;
 
     }
 
     .hobbies__box {
-        width: 20%;
+        width: auto;
         height: 130px;
     
     }
     
-    .academic__courses{
-        flex-wrap: wrap
-    }
-
     .academic__courses__box{
-
         width: 100%;
         }
     .background{
@@ -1002,6 +1006,7 @@ Utiliza las referencias de los breakpoints @media abajo */
     .experience__description{
         margin-top: 1rem;
     }
+}
 /*Menu*/
 
 /*Titulo*/
