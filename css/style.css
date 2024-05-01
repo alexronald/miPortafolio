@@ -432,26 +432,30 @@ font-size: 40px;
 
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
-        transform: translateX(25%);
+        transform: translateX(30%);
     }
     .carousel-inner .carousel-item-next{
         display: none;
     }
     .carousel-inner .carousel-item-start.active, 
     .carousel-inner .carousel-item-prev {
-        transform: translateX(-25%);
+        transform: translateX(-30%);
     }
-}*/
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start { 
-    transform: translateX(0);
+    /*.carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(0);
+    }*/
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start { 
+        transform: translateX(0);
+    }
+    
 }
+
 
 .carousel-inner .active.carousel-item-end{
     display: none;
 }
-
 
 .skills, .hobbies{
     align-items: center ;
@@ -923,6 +927,24 @@ Utiliza las referencias de los breakpoints @media abajo */
     .carousel-inner .carousel-item > div {
         display: block;
     }
+
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start { 
+    transform: translateX(-40%);
+}
+
+.carousel-inner .carousel-item-start.active, 
+.carousel-inner .carousel-item-prev {
+    transform: translateX(-40%);
+}
+.carousel-inner .carousel-item-end.active,
+.carousel-inner .carousel-item-next {
+    transform: translateX(10%);
+}
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+    transform: translateX(10%);
+}
     .skills, .hobbies {
         flex-direction: column;
     }
