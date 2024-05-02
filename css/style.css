@@ -664,7 +664,7 @@ display: flex;
     align-items: center;
 }
 .experience__info-container{
-    margin-left: 1rem;
+    background-color: var(--global-color-2);
 }
 #reves{
 
