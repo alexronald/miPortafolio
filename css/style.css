@@ -555,7 +555,79 @@ background-color: #ffffff;
 font-weight: 100;
     font-family: var(--source-sans-pro);
 }
+
+/*tab*
+
+/* funcionamiento básico del sistema de pestañas */
+.tab-content {
+    display: none;
+  }
+  
+  .tab:target .tab-content, .tab:last-of-type .tab-content {
+    display: block;
+  }
+  
+  .tab:target ~ .tab:last-of-type .tab-content {
+    display: none;
+  }
+  
+  /* parámetros para configurar las pestañas */
+  :root {
+    --tabs-width: 150px;
+    --tabs-height: 40px;
+  }
+
+  /* esto es para posicionar las pestañas correctamente */
+  .tab-container {
+    position: relative;
+    padding-top: var(--tabs-height); /* en esta zona colocaremos las pestañas */
+  } 
+  #tab1>a { --tabs-position: 0; }
+  #tab2>a { --tabs-position: 1; }
+  #tab3>a { --tabs-position: 2; }
+  #tab4>a { --tabs-position: 3; }
+  #tab5>a { --tabs-position: 4; }
+  #tab6>a { --tabs-position: 5; }
+  #tab7>a { --tabs-position: 6; }
+  #tab8>a { --tabs-position: 7; }
+  #tab9>a { --tabs-position: 8; }
+  .tab>a {
+    text-align: center;
+    position: absolute;
+    width: calc(var(--tabs-width));
+    height: calc(var(--tabs-height) + var(--tabs-border-size)); 
+    top: 0;
+    left: calc(var(--tabs-width) * var(--tabs-position)); /* posición de cada pestaña */
+  }
+  
+  /* más aspecto */
+  .tabs { 
+    font-family: var(--orbitron);
+    padding: 10px;
+  }
+  .tab-content {
+    padding: 20px;
+  }
+  .tab>a {
+    padding: 10px;
+  }
+  .tab:target>a, .tab:last-of-type>a {
+    color: #ff004d;
+    background-color: var(--global-color-6); 
+  }
+  .tab:target ~ .tab:last-of-type>a {
+    color: var(--global-color-1);
+    background-color: var(--tabs-dark-color); 
+  }
+
+/*end tab*/
+
+
 /* experiencia*/
+.secction__box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 .experience__section__title{
     font-family: var(--orbitron);
     font-weight: 700;
@@ -569,16 +641,33 @@ font-weight: 100;
     padding: 1rem 3rem;
     background-color: var(--global-color-7);
 }
+.contenido__experience__img{
+min-width: 150px;
+max-width: 300px;
+height: 200px;
+padding: 10px ;
+background: var(--global-color-3);
+display: flex;
+
+}
+.experience__img{
+    border-radius: 10px;
+    display: block;
+    margin: auto 0;
+    width: 100%;
+
+}
 .experiencie__box{
+    margin: 20px 0px;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .experience__info-container{
     margin-left: 1rem;
 }
 #reves{
-    flex-direction: row-reverse;
-    justify-content: space-between;
+
 }
 .experience__title{
     font-family: var(--orbitron);
@@ -586,7 +675,7 @@ font-weight: 100;
     font-size: 30px;
 }
 .experience__text{
-    color: var(--global-color-2);
+    color: var(--global-color-1);
     font-weight: 100;
     font-family: var(--source-sans-pro);
 }
@@ -819,14 +908,19 @@ Utiliza las referencias de los breakpoints @media abajo */
     .experience__section__title{
         margin-top: 1rem;
     }
+
+    .secction__box{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+    }
+
     .experience__img{
         width: 100%;
         }
     .experiencie__box{
         margin: 1rem 0;
         flex-direction: column;
-
-        align-items: flex-start;
     }
     .experience__title{
     font-size: 22px;
@@ -876,6 +970,10 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 /*Mobile*/
 @media (max-width: 625px){
+    :root {
+        --tabs-width: calc(100% / 3);
+        --tabs-height: 50px;
+      }
     .cabecera__lista{
         /*display: none;*/
     }
@@ -986,6 +1084,14 @@ Utiliza las referencias de los breakpoints @media abajo */
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
+
+    .secction__box {
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        /* justify-items: center; */
+        flex-direction: column;
+        align-items: center;
+    }
     .experience__section__title{
         margin-top: 1rem;
     }
@@ -995,9 +1101,14 @@ Utiliza las referencias de los breakpoints @media abajo */
     .experiencie__box{
         margin: 1rem 0;
         flex-direction: column;
+        align-items: center;
     }
     .experience__title{
-    font-size: 22px;
+        text-align: center;
+        font-size: 22px;
+    }
+    .experience__text{
+        text-align: center;
     }
     .container__total{
         padding: 0 1rem;
