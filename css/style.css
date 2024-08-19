@@ -8,6 +8,7 @@
         --global-color-5: #ff004d;
         --global-color-6: #5a082d;
         --global-color-7: #33030d;
+        --global-color-tex: #3a3a3a;
 
         --azeret-mono: 'Azeret Mono',monospace;
         --orbitron: 'Orbitron',sans-serif;
@@ -322,6 +323,9 @@ section.title{
     animation-play-state: running;
     background-color: #33030d;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    --global-color-tex: #ffffff;
+}
+.about__card:hover .about__paragraph{
     color: white;
 }
 
@@ -378,12 +382,14 @@ font-size: 40px;
     text-align: justify;
 }
 .about__contentd__end{
+    flex-basis: calc(100vw / 2);
     display: flex;
     align-items: end;
     flex-direction: column;
 }
 
 .about__contentd__star{
+    flex-basis: calc(100vw / 2);
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -402,6 +408,10 @@ font-size: 40px;
     filter: grayscale(100%);
     transform: translateY(-10%);
     box-shadow: 0px 5px 10px var(--global-color-7);
+}
+.card:hover>ul.hobbies__box.hobbies__name{
+    color: white;
+    filter:hue-rotate(12deg) brightness(50%) saturate(40);
 }
 .carousel-inner{
     padding-top: 30px;
@@ -543,16 +553,21 @@ width: 33%;
     justify-content: center;
     padding-top: 5rem;
     padding-bottom: 5rem;
-background-color: #ffffff;
+    background-color: #ffffff;
 }
 .academic__courses__item__title{
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: var(--global-color-2);
     font-family: var(--orbitron);
     font-weight: 300;
 }
 
 .academic__courses__item__subtitle{
-font-weight: 100;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 100;
     font-family: var(--source-sans-pro);
 }
 
@@ -717,7 +732,15 @@ display: flex;
     flex-direction: column;
 
 }
+.formcontato__text{
+    flex-basis: calc(100vw/2);
+}
 .formcontato--esquerda{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: calc(100vw/2);
     margin-right: 1rem;
 }
 .formcontato__title{
@@ -939,6 +962,14 @@ Utiliza las referencias de los breakpoints @media abajo */
     }
     .formcontato__img{
         display: none;
+    }
+    .formcontato--esquerda{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 0;
+        margin-right: 1rem;
     }
     .formcontato__contacto{
         flex-direction: column;
